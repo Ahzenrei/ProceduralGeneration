@@ -87,6 +87,11 @@ public class PlaneGenerator : MonoBehaviour
         mesh.bounds = newBounds;
     }
 
+    public void RecalculateNormalBounds()
+    {
+        meshFilter.sharedMesh.RecalculateBounds();
+    }
+
     private void OnValidate()
     {
         flatZoneMaxX = flatZoneOrigin.x + flatZone.x / 2;

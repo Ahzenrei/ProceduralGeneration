@@ -12,5 +12,8 @@ class PlaneGeneratorHelperEditor : Editor
 
         if (GUILayout.Button("Generate"))
             ((PlaneGenerator)target).CreatePlane();
+
+        if (GUILayout.Button("Recalculate normal bounds"))
+            ((PlaneGenerator)target).RecalculateNormalBounds();
     }
 }
